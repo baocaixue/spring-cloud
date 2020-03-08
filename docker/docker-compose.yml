@@ -15,9 +15,11 @@ services:
     image: isaac/confsvr:1.0.0
     ports:
       - "8888:8888"
-#  licensingservice:
-#    image: isaac/licensing:1.0.0
-#    ports:
-#    - "8082:8082"
-
-
+    environment:
+      "ENCRYPT_KEY": "BAOCAIXUEDASHUAIGE"
+  licensingservice:
+    image: isaac/licensing:1.0.0
+    ports:
+    - "8082:8082"
+    environment:
+      "ENCRYPT_KEY": "BAOCAIXUEDASHUAIGE"
