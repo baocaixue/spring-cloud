@@ -19,6 +19,7 @@
     <modules>
         <module>hello-world</module>
         <module>licensing-service</module>
+        <module>confsvr</module>
     </modules>
 
     <properties>
