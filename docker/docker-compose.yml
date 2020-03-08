@@ -1,0 +1,6 @@
+version: "2.2"
+services:
+  hello_world:
+    image: isaac/hello_world:1.0.0
+    ports:
+    - "8080:8080"
