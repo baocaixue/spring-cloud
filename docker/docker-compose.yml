@@ -4,3 +4,7 @@ services:
     image: isaac/hello_world:1.0.0
     ports:
     - "8080:8080"
+  licensingservice:
+    image: isaac/licensing:1.0.0
+    ports:
+    - "8082:8080"

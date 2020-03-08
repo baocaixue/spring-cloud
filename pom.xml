@@ -18,6 +18,7 @@
 
     <modules>
         <module>hello-world</module>
+        <module>licensing-service</module>
     </modules>
 
     <properties>
