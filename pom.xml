@@ -20,6 +20,7 @@
         <module>hello-world</module>
         <module>licensing-service</module>
         <module>confsvr</module>
+        <module>eurekasvr</module>
     </modules>
 
     <properties>
