@@ -1,6 +1,6 @@
 spring:
   application:
-    name: licensingservice
+    name: licensingservice # 必须直接映射到SpringCloud配置服务器中的目录的名称
   profiles:
     active:
       dev

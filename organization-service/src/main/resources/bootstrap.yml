@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: organizationservice
+  profiles:
+    active:
+      dev
+  cloud:
+    config:
+      uri: http://confsvr:8888
+server:
+  port: 8085
