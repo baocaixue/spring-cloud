@@ -19,3 +19,11 @@ spring:
       label: master
       discovery:
         enabled: true
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eurekasvr:8761/eureka/

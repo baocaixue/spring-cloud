@@ -11,33 +11,30 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=12345678
       - MYSQL_DATABASE=eagle_eye_dev
+    restart: always
   configserver:
     image: isaac/confsvr:1.0.0
     ports:
       - "8888:8888"
     environment:
       "ENCRYPT_KEY": "BAOCAIXUEDASHUAIGE"
+    restart: always
   eurekasvr:
     image: isaac/eurekasvr:1.0.0
     ports:
     - "8761:8761"
+    restart: always
   licensingservice:
     image: isaac/licensing-service:1.0.0
     ports:
     - "8082:8082"
     environment:
       "ENCRYPT_KEY": "BAOCAIXUEDASHUAIGE"
-    depends_on:
-      - configserver
-      - database
-      - eurekasvr
+    restart: always
   organizationservice:
     image: isaac/organization-service:1.0.0
     ports:
     - "8085:8085"
     environment:
       "ENCRYPT_KEY": "BAOCAIXUEDASHUAIGE"
-    depends_on:
-      - configserver
-      - database
-      - eurekasvr
+    restart: always
