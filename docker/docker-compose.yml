@@ -30,6 +30,11 @@ services:
     - "8082:8082"
     environment:
       "ENCRYPT_KEY": "BAOCAIXUEDASHUAIGE"
+      "SPRING_PROFILES_ACTIVE": "lc"
+      CONFIGSERVER_URI: "http://configserver:8888"
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT:   "8761"
+      CONFIGSERVER_PORT:   "8888"
     restart: always
   organizationservice:
     image: isaac/organization-service:1.0.0
@@ -37,4 +42,5 @@ services:
     - "8085:8085"
     environment:
       "ENCRYPT_KEY": "BAOCAIXUEDASHUAIGE"
+      "SPRING_PROFILES_ACTIVE": "lc"
     restart: always

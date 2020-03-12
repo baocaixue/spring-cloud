@@ -17,20 +17,27 @@ public class LicenseServiceController {
     private ServiceConfig serviceConfig;
 
     @GetMapping
-    public List<License> getLicenses(@PathVariable("organizationId") String organizationId) {
+    public List<License> getLicenses(@PathVariable String organizationId) {
 
         return licenseService.getLicensesByOrg(organizationId);
     }
 
     @GetMapping(value="{licenseId}")
-    public License getLicenses( @PathVariable("organizationId") String organizationId,
-                                @PathVariable("licenseId") String licenseId) {
+    public License getLicenses( @PathVariable String organizationId,
+                                @PathVariable String licenseId) {
 
-        return licenseService.getLicense(organizationId,licenseId);
+        return licenseService.getLicense(organizationId,licenseId, "");
+    }
+
+    @GetMapping(value="{licenseId}/{clientType}")
+    public License getLicensesWithClient(@PathVariable String organizationId,
+                                         @PathVariable String licenseId,
+                                         @PathVariable String clientType) {
+        return licenseService.getLicense(organizationId,licenseId, clientType);
     }
 
     @PutMapping(value="{licenseId}")
-    public String updateLicenses( @PathVariable("licenseId") String licenseId) {
+    public String updateLicenses( @PathVariable String licenseId) {
         return "This is the put";
     }
 
@@ -41,7 +48,7 @@ public class LicenseServiceController {
 
     @DeleteMapping(value="{licenseId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public String deleteLicenses( @PathVariable("licenseId") String licenseId) {
+    public String deleteLicenses( @PathVariable String licenseId) {
         return "This is the Delete";
     }
 }

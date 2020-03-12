@@ -2,11 +2,9 @@ package com.isaac.licenses.model;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
+import org.springframework.stereotype.Component;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Accessors(chain = true)
@@ -34,4 +32,7 @@ public class License {
 
     @Column(name="comment")
     private String comment;
+
+    @Transient
+    private Organization organization;
 }
