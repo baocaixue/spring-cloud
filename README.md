@@ -25,9 +25,9 @@ second step: run `docker-compose up -d` in docker directory
 you can test uri after all services are started    
 
 uri | http method | serviceName   
--- | -- | -- 
+--- | --- | ---     
 [eureka](http://localhost:8761) | GET | eurekasvr    
-[config-test](http://localhost:8888/licensingservice/dev) | GET | configserver  
+[config-test](http://localhost:8888/licensingservice/dev) | GET | configserver    
 [get-license](http://localhost:8082/v1/organizations/e254f8c-c442-4ebe-a82a-e2fc1d1ff78a/licenses/f3831f8c-c338-4ebe-a82a-e2fc1d1ff78a/feign) | GET | licensingservice    
 [get-org](http://localhost:8085/v1/organizations/e254f8c-c442-4ebe-a82a-e2fc1d1ff78a) | GET | organizationservice
 
