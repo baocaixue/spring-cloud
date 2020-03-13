@@ -24,10 +24,10 @@ second step: run `docker-compose up -d` in docker directory
 ### Test Service Uri    
 uri | http method | serviceName   
 -- | -- | -- 
-localhost:8761 | GET | eurekasvr    
-localhost:8888/licensingservice/dev | GET | configserver  
-localhost:8082/v1/organizations/e254f8c-c442-4ebe-a82a-e2fc1d1ff78a/licenses/f3831f8c-c338-4ebe-a82a-e2fc1d1ff78a/feign | GET | licensingservice    
-localhost:8085/v1/organizations/e254f8c-c442-4ebe-a82a-e2fc1d1ff78a | GET | organizationservice
+[eureka](http://localhost:8761) | GET | eurekasvr    
+[config-test](http://localhost:8888/licensingservice/dev) | GET | configserver  
+[get license](http://localhost:8082/v1/organizations/e254f8c-c442-4ebe-a82a-e2fc1d1ff78a/licenses/f3831f8c-c338-4ebe-a82a-e2fc1d1ff78a/feign) | GET | licensingservice    
+[get org](http://localhost:8085/v1/organizations/e254f8c-c442-4ebe-a82a-e2fc1d1ff78a) | GET | organizationservice
 
 
 
