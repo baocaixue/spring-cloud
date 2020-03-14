@@ -17,7 +17,7 @@ public class DiscoveryService {
 
     public List<String> getEurekaServices(){
         return discoveryClient.getServices().parallelStream()
-                .map(serviceName -> discoveryClient.getInstances(serviceName))
+                .map(serviceId -> discoveryClient.getInstances(serviceId))
                 .flatMap(Collection::parallelStream)
                 .map(serviceInstance -> String.format("%s:%s", serviceInstance.getServiceId(), serviceInstance.getUri()))
                 .collect(Collectors.toList());
