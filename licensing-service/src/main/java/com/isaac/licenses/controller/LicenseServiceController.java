@@ -3,7 +3,9 @@ package com.isaac.licenses.controller;
 import com.isaac.licenses.config.ServiceConfig;
 import com.isaac.licenses.model.License;
 import com.isaac.licenses.service.LicenseService;
+import com.isaac.licenses.util.UserContextHolder;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "v1/organizations/{organizationId}/licenses")
 @AllArgsConstructor
+@Slf4j
 public class LicenseServiceController {
     private LicenseService licenseService;
     private ServiceConfig serviceConfig;
@@ -33,6 +36,7 @@ public class LicenseServiceController {
     public License getLicensesWithClient(@PathVariable String organizationId,
                                          @PathVariable String licenseId,
                                          @PathVariable String clientType) {
+        log.info("LicenseController Correlation id: {}", UserContextHolder.getContext().getCorrelationId());
         return licenseService.getLicense(organizationId,licenseId, clientType);
     }
 
