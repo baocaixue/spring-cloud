@@ -1,4 +1,4 @@
-version: "2.2"
+version: "3"
 services:
 #  hello_world:
 #    image: isaac/hello_world:1.0.0
@@ -41,4 +41,6 @@ services:
     environment:
       ENCRYPT_KEY: "BAOCAIXUEDASHUAIGE"
       SPRING_PROFILES_ACTIVE: "lc"
+      spring.cloud.config.uri: "http://configserver:8888"
+      eureka.client.service-url.defaultZone: "http://eurekasvr:8761/eureka/"
     restart: always
