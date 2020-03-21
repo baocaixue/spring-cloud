@@ -1,13 +1,13 @@
 package com.isaac.organization.hystrix;
 
-import com.isaac.licenses.util.UserContext;
-import com.isaac.licenses.util.UserContextHolder;
+import com.isaac.organization.util.UserContext;
+import com.isaac.organization.util.UserContextHolder;
 
 import java.util.concurrent.Callable;
 
 public class DelegatingUserContextCallable<V> implements Callable<V> {
     private final  Callable<V> delegate;
-    private UserContext originalUserContext;
+    private  UserContext  originalUserContext;
 
     public DelegatingUserContextCallable(
             Callable<V> delegate, UserContext originalUserContext) {
