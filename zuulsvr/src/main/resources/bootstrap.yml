@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: zuulsvr
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8888
+server:
+  port: 5555
