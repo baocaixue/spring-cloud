@@ -1,6 +1,6 @@
 spring:
   application:
-    name: zuulsvr
+    name: zuulservice
   profiles:
     active: dev
   cloud:

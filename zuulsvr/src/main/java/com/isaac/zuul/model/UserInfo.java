@@ -1,0 +1,11 @@
+package com.isaac.zuul.model;
+
+import lombok.Data;
+import lombok.experimental.Accessors;
+
+@Data
+@Accessors(chain = true)
+public class UserInfo {
+    private String organizationId;
+    private String userId;
+}

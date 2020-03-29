@@ -1,5 +1,6 @@
 package com.isaac.licenses;
 
+import com.isaac.licenses.utils.UserContextInterceptor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
@@ -25,6 +26,10 @@ public class LicenseApplication {
     @Bean
     @LoadBalanced//支持Ribbon的RestTemplate
     public RestTemplate restTemplate() {
-        return new RestTemplate();
+        var template = new RestTemplate();
+        var interceptors = template.getInterceptors();
+        interceptors.add(new UserContextInterceptor());
+        template.setInterceptors(interceptors);
+        return template;
     }
 }

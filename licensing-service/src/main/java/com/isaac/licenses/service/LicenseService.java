@@ -7,7 +7,7 @@ import com.isaac.licenses.config.ServiceConfig;
 import com.isaac.licenses.model.License;
 import com.isaac.licenses.model.Organization;
 import com.isaac.licenses.repository.LicenseRepository;
-import com.isaac.licenses.util.UserContextHolder;
+import com.isaac.licenses.utils.UserContextHolder;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import lombok.AllArgsConstructor;
@@ -108,7 +108,7 @@ public class LicenseService {
     }
 
     private Organization retrieveOrgInfo(String organizationId, String clientType) {
-        Organization organization = null;
+        Organization organization;
         switch (clientType) {
             case "rest":
                 organization = organizationRestTemplateClient.getOrganization(organizationId);
@@ -117,8 +117,10 @@ public class LicenseService {
                 organization = organizationDiscoveryClient.getOrganization(organizationId);
                 break;
             case "feign":
-            default:
                 organization = organizationFeignClient.getOrganization(organizationId);
+                break;
+            default:
+                organization = organizationRestTemplateClient.getOrganization(organizationId);
         }
         return organization;
     }

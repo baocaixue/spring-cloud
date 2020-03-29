@@ -1,6 +1,6 @@
 package com.isaac.licenses.hystrix;
 
-import com.isaac.licenses.util.UserContextHolder;
+import com.isaac.licenses.utils.UserContextHolder;
 import com.netflix.hystrix.HystrixThreadPoolKey;
 import com.netflix.hystrix.HystrixThreadPoolProperties;
 import com.netflix.hystrix.strategy.concurrency.HystrixConcurrencyStrategy;

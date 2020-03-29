@@ -15,3 +15,8 @@ zuul:
   prefix: api
   routes:
     organizationservice: /organization/**
+    licensingservice: /licensing/**
+#    licensestatic:
+#      path: /licensestatic/**
+#      url: http://licenseservice-static:8081
+#  ignored-services: "*"

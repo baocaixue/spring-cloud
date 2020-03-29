@@ -1,7 +1,7 @@
 package com.isaac.licenses.hystrix;
 
-import com.isaac.licenses.util.UserContext;
-import com.isaac.licenses.util.UserContextHolder;
+import com.isaac.licenses.utils.UserContext;
+import com.isaac.licenses.utils.UserContextHolder;
 
 import java.util.concurrent.Callable;
 

@@ -17,7 +17,7 @@ public class OrganizationRestTemplateClient {
 
     public Organization getOrganization(String organizationId) {
         var restExchange = restTemplate.exchange(
-                "http://organizationservice/v1/organizations/{organizationId}",
+                "http://zuulservice/api/organization/v1/organizations/{organizationId}",
                 HttpMethod.GET,
                 null, Organization.class, organizationId);
         return restExchange.getBody();

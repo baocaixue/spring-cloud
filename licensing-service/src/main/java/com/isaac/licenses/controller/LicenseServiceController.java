@@ -3,7 +3,7 @@ package com.isaac.licenses.controller;
 import com.isaac.licenses.config.ServiceConfig;
 import com.isaac.licenses.model.License;
 import com.isaac.licenses.service.LicenseService;
-import com.isaac.licenses.util.UserContextHolder;
+import com.isaac.licenses.utils.UserContextHolder;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
