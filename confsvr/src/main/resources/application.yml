@@ -12,7 +12,7 @@ spring:
 #          search-locations: classpath:/config
         git:
           uri:  https://gitee.com/isaac-bao/config-repo #https://github.com/baocaixue/config-repo
-          searchPaths: licensingservice,organizationservice
+          searchPaths: licensingservice,organizationservice,zuulservice
 #          username: 964c0016e7dac259c78cac12c5f822ee6c7097f3699586e7f68417abb79f9c5400831ab1129bdd7f8169cb74aedabe8e
 #          password: cfa99af3c3f25860797e8ffe2bdf32e879fcb887b079af10bdf6aa0dfcb09d13
 #          timeout: 1024102410
