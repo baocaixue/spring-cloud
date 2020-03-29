@@ -48,7 +48,7 @@ public class SpecialRoutesFilter extends ZuulFilter {
     private FilterUtils filterUtils;
     private RestTemplate restTemplate;
 
-    private ProxyRequestHelper helper = new ProxyRequestHelper();
+    private ProxyRequestHelper helper;
 
     @Override
     public String filterType() {
@@ -71,6 +71,7 @@ public class SpecialRoutesFilter extends ZuulFilter {
         var abTestRoute = getAbRoutingInfo(filterUtils.getServiceId());
         if (abTestRoute != null && userSpecialRoute(abTestRoute)) {
             var route = buildRouteString(ctx.getRequest().getRequestURI(), abTestRoute.getEndpoint(), ctx.get(SERVICE_ID).toString());
+            route = "http://localhost:8087/v1/organizations/e254f8c-c442-4ebe-a82a-e2fc1d1ff78a";
             forwardToSpecialRoute(route);
         }
         return null;
