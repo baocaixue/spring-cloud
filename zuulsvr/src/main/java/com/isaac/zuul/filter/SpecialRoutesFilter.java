@@ -216,12 +216,12 @@ public class SpecialRoutesFilter extends ZuulFilter {
     }
 
     private boolean userSpecialRoute(AbTestingRoute abTestRoute) {
-        return true;
-//        var random = new Random();
-//        if (abTestRoute.getActive().equals("N"))
-//            return false;
-//        int value = random.nextInt(10) + 1;
-//        return abTestRoute.getWeight() < value;
+//        return true;
+        var random = new Random();
+        if (abTestRoute.getActive().equals("N"))
+            return false;
+        int value = random.nextInt(10) + 1;
+        return abTestRoute.getWeight() < value;
     }
 
     private AbTestingRoute getAbRoutingInfo(String serviceId) {
