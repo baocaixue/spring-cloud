@@ -25,6 +25,7 @@
         <module>orgservice-new</module>
         <module>specialroutes-service</module>
         <module>zuulsvr</module>
+        <module>authentication-service</module>
     </modules>
 
     <properties>
