@@ -1,0 +1,10 @@
+POST http://localhost:8901/auth/oauth/token?grant_type=password&username=admin&password=12345678&scope=webclient
+Accept: */*
+Cache-Control: no-cache
+Authorization: Basic ZWFnbGVleWU6MTIzNDU2
+Content-Type: application/X-www.form-urlencoded
+
+<> 2020-03-31T093522.200.json
+
+###
+
