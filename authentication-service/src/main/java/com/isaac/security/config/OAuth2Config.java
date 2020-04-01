@@ -23,7 +23,7 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
-                .withClient("eagleeye")
+                .withClient("security")
                 .secret("123456")
                 .authorizedGrantTypes(
                         "fresh_token",

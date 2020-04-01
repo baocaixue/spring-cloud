@@ -73,3 +73,13 @@ services:
       spring.cloud.config.uri: "http://configserver:8888"
       eureka.client.service-url.defaultZone: "http://eurekasvr:8761/eureka/"
     restart: always
+  authenticationservice:
+    image: isaac/authentication-service:1.0.0
+    ports:
+    - "8901:8901"
+    environment:
+      SPRING_PROFILES_ACTIVE: "lc"
+      ENCRYPT_KEY: "BAOCAIXUEDASHUAIGE"
+      spring.cloud.config.uri: "http://configserver:8888"
+      eureka.client.service-url.defaultZone: "http://eurekasvr:8761/eureka/"
+    restart: always
