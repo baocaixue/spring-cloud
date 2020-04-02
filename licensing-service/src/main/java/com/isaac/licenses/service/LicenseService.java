@@ -54,7 +54,7 @@ public class LicenseService {
 //                .setProductName("Test Product Name")
 //                .setLicenseType("PerSeat");
         log.info("LicenseService Correlation id: {}", UserContextHolder.getContext().getCorrelationId());
-        randomlyRunLong();//模拟服务调用超时
+        //randomlyRunLong();//模拟服务调用超时
         return licenseRepository.findByOrganizationIdAndId(organizationId, licenseId)
                 .map(license -> license.setOrganization(this.retrieveOrgInfo(license.getOrganizationId(), clientType)))
                 .orElse(null);
@@ -89,7 +89,7 @@ public class LicenseService {
             }
     )//应尽量避免设置超时时间，如果无法解决运行缓慢的服务调用，务必将这些服务调用隔离到单独的线程池中
     public List<License> getLicensesByOrg(String organizationId){
-        randomlyRunLong();//模拟数据库超时场景
+        //randomlyRunLong();//模拟数据库超时场景
         return licenseRepository.findByOrganizationId( organizationId );
     }
 

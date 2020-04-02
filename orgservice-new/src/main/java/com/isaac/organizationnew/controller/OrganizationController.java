@@ -29,9 +29,9 @@ public class OrganizationController {
         orgService.saveOrg( org );
     }
 
-    @DeleteMapping
+    @DeleteMapping(value = "/{organizationId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteOrganization(@RequestBody Organization org) {
-        orgService.deleteOrg( org );
+    public void deleteOrganization(@PathVariable String organizationId) {
+        orgService.deleteOrg(organizationId);
     }
 }
