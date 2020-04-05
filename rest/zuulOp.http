@@ -1,7 +1,19 @@
+# Refresh Routes
+POST http://localhost:5555/actuator/refresh
+Accept: */*
+Cache-Control: no-cache
+###
+
+# Get all Routes
+GET http://localhost:5555/actuator/reoutes
+Accept: */*
+Cache-Control: no-cache
+###
+
 # License
 GET http://localhost:5555/api/licensing/v1/organizations/e254f8c-c442-4ebe-a82a-e2fc1d1ff78a/licenses/f3831f8c-c338-4ebe-a82a-e2fc1d1ff78a
 Accept: */*
 Cache-Control: no-cache
-Authorization: Bearer 4a9bedcc-c878-4657-95a4-5ec21db328dd
+Authorization: Bearer 65567739-083d-4bb5-a26d-302abec691e8
 
 ###
