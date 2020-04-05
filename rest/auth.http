@@ -1,10 +1,15 @@
+# Get Token
 POST http://localhost:8901/auth/oauth/token?grant_type=password&username=isaac&password=123456&scope=webclient
 Accept: */*
 Cache-Control: no-cache
 Authorization: Basic c2VjdXJpdHk6MTIzNDU2
 Content-Type: application/X-www.form-urlencoded
 
-<> 2020-03-31T093522.200.json
+###
+# Get User
+GET http://localhost:8901/auth/user
+Accept: */*
+Cache-Control: no-cache
+Authorization: Bearer cea35cfb-93e0-454f-909a-6c09456d83b1
 
 ###
-
