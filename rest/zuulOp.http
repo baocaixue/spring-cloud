@@ -14,6 +14,6 @@ Cache-Control: no-cache
 GET http://localhost:5555/api/licensing/v1/organizations/e254f8c-c442-4ebe-a82a-e2fc1d1ff78a/licenses/f3831f8c-c338-4ebe-a82a-e2fc1d1ff78a
 Accept: */*
 Cache-Control: no-cache
-Authorization: Bearer 65567739-083d-4bb5-a26d-302abec691e8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODYxOTI5MjMsInVzZXJfbmFtZSI6ImlzYWFjIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6ImRkMmU4Y2E4LTM3ZjctNDI0Yi1hNjllLTc5MWVmYzg1MWQyYyIsImNsaWVudF9pZCI6InNlY3VyaXR5Iiwic2NvcGUiOlsid2ViY2xpZW50Il19.ugsdZyDFRxnMy77ix7nHEwGsKk_ZrYAuobtRo8AY0lE
 
 ###
