@@ -7,5 +7,20 @@ spring:
   cloud:
     config:
       uri: http://localhost:8888
+    stream:
+      bindings:
+        output:
+          destination: orgChangeTopic
+          binder: rabbit
+          content-type: application/json
+      rabbit:
+        bindings:
+          input:
+            consumer:
+              republishToDlq: true
+              autoBindDlq: true
+  rabbitmq:
+    host: localhost
+    port: 5672
 #server:
 #  port: 8085

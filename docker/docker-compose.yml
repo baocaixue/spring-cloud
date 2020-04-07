@@ -83,3 +83,14 @@ services:
       spring.cloud.config.uri: "http://configserver:8888"
       eureka.client.service-url.defaultZone: "http://eurekasvr:8761/eureka/"
     restart: always
+  rabbitserver:
+    image: rabbitmq:management
+    ports:
+    - "4369:4369"
+    - "5672:5672"
+    - "15672:15672"
+    - "25672:25672"
+  redis:
+    image: redis:6.0-rc3
+    ports:
+    - "6379:6379"

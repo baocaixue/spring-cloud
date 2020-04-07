@@ -1,0 +1,9 @@
+POST http://localhost:8086/v1/organizations
+Accept: */*
+Cache-Control: no-cache
+Authorization: Bearer 2aee9eb8-56b0-4549-87f6-27319f81291c
+Content-Type: application/json
+
+{      "name": "test",   "contactName": "test",   "contactEmail": "test@gmail.com",   "contactPhone": "11111" }
+
+###
