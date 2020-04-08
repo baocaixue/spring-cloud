@@ -12,7 +12,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @EnableEurekaClient
 @EnableCircuitBreaker
 @EnableResourceServer
-@EnableBinding(Source.class)
+@EnableBinding(Source.class)//告诉Spring Cloud Stream将应用程序绑定到消息代理
 public class OrganizationApplication {
     public static void main(String[] args) {
         SpringApplication.run(OrganizationApplication.class, args);

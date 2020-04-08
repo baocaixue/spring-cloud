@@ -44,26 +44,26 @@ services:
       spring.cloud.config.uri: "http://configserver:8888"
       eureka.client.service-url.defaultZone: "http://eurekasvr:8761/eureka/"
     restart: always
-  orgservice-new:
-    image: isaac/orgservice-new:1.0.0
-    ports:
-    - "8087:8087"
-    environment:
-      ENCRYPT_KEY: "BAOCAIXUEDASHUAIGE"
-      SPRING_PROFILES_ACTIVE: "lc"
-      spring.cloud.config.uri: "http://configserver:8888"
-      eureka.client.service-url.defaultZone: "http://eurekasvr:8761/eureka/"
-    restart: always
-  specialroutes-service:
-    image: isaac/specialroutes-service:1.0.0
-    ports:
-    - "8910:8910"
-    environment:
-      ENCRYPT_KEY: "BAOCAIXUEDASHUAIGE"
-      SPRING_PROFILES_ACTIVE: "lc"
-      spring.cloud.config.uri: "http://configserver:8888"
-      eureka.client.service-url.defaultZone: "http://eurekasvr:8761/eureka/"
-    restart: always
+#  orgservice-new:
+#    image: isaac/orgservice-new:1.0.0
+#    ports:
+#    - "8087:8087"
+#    environment:
+#      ENCRYPT_KEY: "BAOCAIXUEDASHUAIGE"
+#      SPRING_PROFILES_ACTIVE: "lc"
+#      spring.cloud.config.uri: "http://configserver:8888"
+#      eureka.client.service-url.defaultZone: "http://eurekasvr:8761/eureka/"
+#    restart: always
+#  specialroutes-service:
+#    image: isaac/specialroutes-service:1.0.0
+#    ports:
+#    - "8910:8910"
+#    environment:
+#      ENCRYPT_KEY: "BAOCAIXUEDASHUAIGE"
+#      SPRING_PROFILES_ACTIVE: "lc"
+#      spring.cloud.config.uri: "http://configserver:8888"
+#      eureka.client.service-url.defaultZone: "http://eurekasvr:8761/eureka/"
+#    restart: always
   zuulserver:
     image: isaac/zuulsvr:1.0.0
     ports:
