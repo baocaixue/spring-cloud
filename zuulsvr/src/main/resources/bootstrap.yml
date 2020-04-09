@@ -6,5 +6,5 @@ spring:
   cloud:
     config:
       uri: http://localhost:8888
-#server:
-#  port: 5555
+server:
+  port: 5555

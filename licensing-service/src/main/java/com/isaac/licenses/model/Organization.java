@@ -2,8 +2,10 @@ package com.isaac.licenses.model;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class Organization {
+public class Organization implements Serializable {
     String id;
     String name;
     String contactName;

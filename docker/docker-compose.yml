@@ -73,6 +73,8 @@ services:
       spring.cloud.config.uri: "http://configserver:8888"
       eureka.client.service-url.defaultZone: "http://eurekasvr:8761/eureka/"
     restart: always
+    depends_on:
+      - configserver
   authenticationservice:
     image: isaac/authentication-service:1.0.0
     ports:

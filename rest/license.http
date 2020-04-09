@@ -1,0 +1,6 @@
+GET http://localhost:8083/v1/organizations/e254f8c-c442-4ebe-a82a-e2fc1d1ff78a/licenses/f3831f8c-c338-4ebe-a82a-e2fc1d1ff78a
+Accept: */*
+Cache-Control: no-cache
+Authorization: Bearer 7b87e392-97a3-475f-9924-6917070871ff
+Content-Type: application/json
+###
